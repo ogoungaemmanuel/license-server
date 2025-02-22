@@ -1,13 +1,13 @@
 <?php
 
-namespace LaravelReady\LicenseServer\Http\Controllers\Api;
+namespace Xslain\LicenseServer\Http\Controllers\Api;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Event;
 
-use LaravelReady\LicenseServer\Models\License;
-use LaravelReady\LicenseServer\Events\LicenseChecked;
-use LaravelReady\LicenseServer\Http\Controllers\BaseController;
+use Xslain\LicenseServer\Models\License;
+use Xslain\LicenseServer\Events\LicenseChecked;
+use Xslain\LicenseServer\Http\Controllers\BaseController;
 
 class LicenseValidationController extends BaseController
 {

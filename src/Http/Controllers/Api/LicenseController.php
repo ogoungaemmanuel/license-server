@@ -1,11 +1,11 @@
 <?php
 
-namespace LaravelReady\LicenseServer\Http\Controllers\Api;
+namespace Xslain\LicenseServer\Http\Controllers\Api;
 
 use Illuminate\Http\Request;
-use LaravelReady\LicenseServer\Models\License;
-use LaravelReady\LicenseServer\Http\Requests\LicenseUpdateRequest;
-use LaravelReady\LicenseServer\Http\Controllers\BaseController;
+use Xslain\LicenseServer\Models\License;
+use Xslain\LicenseServer\Http\Requests\LicenseUpdateRequest;
+use Xslain\LicenseServer\Http\Controllers\BaseController;
 
 class LicenseController extends BaseController
 {
@@ -65,8 +65,8 @@ class LicenseController extends BaseController
     /**
      * Update the specified resource in storage.
      *
-     * @param \LaravelReady\LicenseServer\Http\Requests\LicenseUpdateRequest $request
-     * @param \LaravelReady\LicenseServer\Models\License $theme
+     * @param \Xslain\LicenseServer\Http\Requests\LicenseUpdateRequest $request
+     * @param \Xslain\LicenseServer\Models\License $theme
      * @return \Illuminate\Http\Response
      */
     public function update(LicenseUpdateRequest $request, License $license)
@@ -83,7 +83,7 @@ class LicenseController extends BaseController
     /**
      * Remove the specified resource from storage.
      *
-     * @param \LaravelReady\LicenseServer\Models\License $theme
+     * @param \Xslain\LicenseServer\Models\License $theme
      * @return \Illuminate\Http\Response
      */
     public function destroy(License $license)

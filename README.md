@@ -1,6 +1,6 @@
 # License Server
 
-[![EgoistDeveloper Laravel License Server](https://preview.dragon-code.pro/EgoistDeveloper/Laravel-License-Server.svg?brand=laravel)](https://github.com/laravel-ready/license-server)
+[![EgoistDeveloper Laravel License Server](https://preview.dragon-code.pro/EgoistDeveloper/Laravel-License-Server.svg?brand=laravel)](https://github.com/xslain/license-server)
 
 [![Stable Version][badge_stable]][link_packagist]
 [![Unstable Version][badge_unstable]][link_packagist]
@@ -20,7 +20,7 @@
 
 **License Server** package, which is a Laravel package that allows you to manage your Laravel applications license. You can use it with any product or service. License Server comes with the agnostic license management system, which allows you to manage your licenses in a simple and easy way. Just add license relation to any product model then you can work in your logic.
 
-This package requires [license-connector](https://github.com/laravel-ready/license-connector) package. **License Connector** is client implementation for License Server. Package for the client makes a request to **License Server** and gets a response.
+This package requires [license-connector](https://github.com/xslain/license-connector) package. **License Connector** is client implementation for License Server. Package for the client makes a request to **License Server** and gets a response.
 
 ## 📋 Requirements
 
@@ -43,7 +43,7 @@ This package requires Laravel 8.x or higher. Other versions are ignored.
 Get via composer
 
 ```bash
-composer require laravel-ready/license-server
+composer require xslain/license-server
 ```
 
 Publish migrations and migrate
@@ -53,7 +53,7 @@ Publish migrations and migrate
 php artisan vendor:publish --tag=license-server-migrations
 
 # apply migrations
-php artisan migrate --path=/database/migrations/laravel-ready/license-server
+php artisan migrate --path=/database/migrations/xslain/license-server
 ```
 
 Configs are very important. You can find them in [license-server.php](config/license-server.php) file. You should read all configs and configure for your needs.
@@ -77,7 +77,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-use LaravelReady\LicenseServer\Traits\Licensable;
+use Xslain\LicenseServer\Traits\Licensable;
 
 class Product extends Model
 {
@@ -101,7 +101,7 @@ class Product extends Model
 
 Add in your namespace list:
 
-`use LaravelReady\LicenseServer\Services\LicenseService;`
+`use Xslain\LicenseServer\Services\LicenseService;`
 
 and product model
 
@@ -134,7 +134,7 @@ $license = LicenseService::addLicense($product, null, $user->id, null, false, tr
 
 - If you provide domain, then the license will be added to the domain. If you don't provide domain, then the license will be added to the user (*in this case user id is required.*).
 - Other parameters are optional and do not forget to configure configs.
-- This method returns `LaravelReady\LicenseServer\Models\License` model.
+- This method returns `Xslain\LicenseServer\Models\License` model.
 - All license keys are in UUID format.
 
 ### getLicenseBy*
@@ -187,8 +187,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Event;
 
-use LaravelReady\LicenseServer\Models\License;
-use LaravelReady\LicenseServer\Events\LicenseChecked;
+use Xslain\LicenseServer\Models\License;
+use Xslain\LicenseServer\Events\LicenseChecked;
 
 class LicenseController extends Controller
 {
@@ -271,14 +271,14 @@ You can send custom data with connector and on the license server-side, you can 
 php artisan make:listener LicenseCheckedListener --event=LicenseChecked
 ```
 
-Add class `LicenseChecked` with `LaravelReady\LicenseServer\Events\LicenseChecked` namespace. You can retrieve custom data from event.
+Add class `LicenseChecked` with `Xslain\LicenseServer\Events\LicenseChecked` namespace. You can retrieve custom data from event.
 
 ```php
 <?php
 
 namespace App\Listeners;
 
-use LaravelReady\LicenseServer\Events\LicenseChecked;
+use Xslain\LicenseServer\Events\LicenseChecked;
 
 class LicenseCheckedListener
 {
@@ -343,14 +343,14 @@ In development you may use domain like `example.test` etc. but you won't pass do
 - Please don't confuse it with ioncube or similar source code encryption tools.
 
 
-[badge_downloads]:      https://img.shields.io/packagist/dt/laravel-ready/license-server.svg?style=flat-square
+[badge_downloads]:      https://img.shields.io/packagist/dt/xslain/license-server.svg?style=flat-square
 
-[badge_license]:        https://img.shields.io/packagist/l/laravel-ready/license-server.svg?style=flat-square
+[badge_license]:        https://img.shields.io/packagist/l/xslain/license-server.svg?style=flat-square
 
-[badge_stable]:         https://img.shields.io/github/v/release/laravel-ready/license-server?label=stable&style=flat-square
+[badge_stable]:         https://img.shields.io/github/v/release/xslain/license-server?label=stable&style=flat-square
 
 [badge_unstable]:       https://img.shields.io/badge/unstable-dev--main-orange?style=flat-square
 
 [link_license]:         LICENSE
 
-[link_packagist]:       https://packagist.org/packages/laravel-ready/license-server
+[link_packagist]:       https://packagist.org/packages/xslain/license-server

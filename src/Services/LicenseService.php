@@ -1,19 +1,17 @@
 <?php
 
-namespace LaravelReady\LicenseServer\Services;
+namespace Xslain\LicenseServer\Services;
 
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Config;
 
-use LaravelReady\LicenseServer\Models\License;
-use LaravelReady\LicenseServer\Support\DomainSupport;
-use LaravelReady\LicenseServer\Exceptions\LicenseException;
+use Xslain\LicenseServer\Models\License;
+use Xslain\LicenseServer\Support\DomainSupport;
+use Xslain\LicenseServer\Exceptions\LicenseException;
 
 class LicenseService
 {
-    public function __construct()
-    {
-    }
+    public function __construct() {}
 
     /**
      * Validate the given domain.

@@ -1,6 +1,6 @@
 <?php
 
-namespace LaravelReady\LicenseServer\Http\Requests;
+namespace Xslain\LicenseServer\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 

@@ -1,5 +1,5 @@
 {
-    "name": "laravel-ready/license-server",
+    "name": "xslain/license-server",
     "description": "License server for Laravel",
     "type": "library",
     "license": "MIT",
@@ -16,8 +16,8 @@
         }
     ],
     "support": {
-        "issues": "https://github.com/laravel-ready/license-server/issues",
-        "source": "https://github.com/laravel-ready/license-server"
+        "issues": "https://github.com/xslain/license-server/issues",
+        "source": "https://github.com/xslain/license-server"
     },
     "require": {
         "php": "^8.2 || ^8.1 || ^8.0",
@@ -26,7 +26,7 @@
         "ext-json": "*",
         "illuminate/support": "^11.0 || ^10.0 || ^9.0",
         "jeremykendall/php-domain-parser": "^6.3.0",
-        "laravel-ready/ultimate-support": "^2.0 || ^1.1",
+        "xslain/ultimate-support": "^2.0 || ^1.1",
         "laravel/sanctum": "^4.0 || ^3.2 || ^3.0 || ^2.1"
     },
     "require-dev": {
@@ -36,7 +36,7 @@
     },
     "autoload": {
         "psr-4": {
-            "LaravelReady\\LicenseServer\\": "src/"
+            "Xslain\\LicenseServer\\": "src/"
         }
     },
     "autoload-dev": {
@@ -51,10 +51,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "LaravelReady\\LicenseServer\\LicenseServerServiceProvider"
+                "Xslain\\LicenseServer\\LicenseServerServiceProvider"
             ],
             "aliases": {
-                "LicenseServer": "LaravelReady\\LicenseServer\\Facades\\LicenseServer"
+                "LicenseServer": "Xslain\\LicenseServer\\Facades\\LicenseServer"
             }
         }
     },

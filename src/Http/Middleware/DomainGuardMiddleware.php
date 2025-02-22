@@ -1,13 +1,13 @@
 <?php
 
-namespace LaravelReady\LicenseServer\Http\Middleware;
+namespace Xslain\LicenseServer\Http\Middleware;
 
 use Closure;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Config;
 
-use LaravelReady\LicenseServer\Support\DomainSupport;
+use Xslain\LicenseServer\Support\DomainSupport;
 
 class DomainGuardMiddleware
 {

@@ -1,14 +1,14 @@
 <?php
 
-namespace LaravelReady\LicenseServer;
+namespace Xslain\LicenseServer;
 
 use Illuminate\Routing\Router;
 
 use Illuminate\Support\ServiceProvider;
-use LaravelReady\LicenseServer\Support\DomainSupport;
-use LaravelReady\LicenseServer\Services\LicenseService;
-use LaravelReady\LicenseServer\Http\Middleware\DomainGuardMiddleware;
-use LaravelReady\LicenseServer\Http\Middleware\LicenseGuardMiddleware;
+use Xslain\LicenseServer\Support\DomainSupport;
+use Xslain\LicenseServer\Services\LicenseService;
+use Xslain\LicenseServer\Http\Middleware\DomainGuardMiddleware;
+use Xslain\LicenseServer\Http\Middleware\LicenseGuardMiddleware;
 
 use Laravel\Sanctum\Http\Middleware\CheckAbilities;
 

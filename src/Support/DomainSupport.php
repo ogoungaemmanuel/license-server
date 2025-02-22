@@ -1,6 +1,6 @@
 <?php
 
-namespace LaravelReady\LicenseServer\Support;
+namespace Xslain\LicenseServer\Support;
 
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Http;

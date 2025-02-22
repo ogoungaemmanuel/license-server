@@ -1,6 +1,6 @@
 <?php
 
-namespace LaravelReady\LicenseServer\Facades;
+namespace Xslain\LicenseServer\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

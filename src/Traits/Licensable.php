@@ -1,11 +1,11 @@
 <?php
 
-namespace LaravelReady\LicenseServer\Traits;
+namespace Xslain\LicenseServer\Traits;
 
 use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Database\Eloquent\Relations\MorphOne;
 
-use LaravelReady\LicenseServer\Models\LicensableProduct;
+use Xslain\LicenseServer\Models\LicensableProduct;
 
 trait Licensable
 {
@@ -17,7 +17,7 @@ trait Licensable
         return $this->morphOne(LicensableProduct::class, 'licensable')
             ->select('id', 'licensable_id', 'licensable_type', 'license_id', 'user_id')
             ->with([
-                'license' => fn ($query) => $query->first(),
+                'license' => fn($query) => $query->first(),
             ]);
     }
 

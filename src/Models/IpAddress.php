@@ -1,6 +1,6 @@
 <?php
 
-namespace LaravelReady\LicenseServer\Models;
+namespace Xslain\LicenseServer\Models;
 
 use Illuminate\Support\Facades\Config;
 use Illuminate\Database\Eloquent\Model;

@@ -1,12 +1,12 @@
 <?php
 
-namespace LaravelReady\LicenseServer;
+namespace Xslain\LicenseServer;
 
 use Illuminate\Support\Facades\Config;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
 
-use LaravelReady\LicenseServer\Events\LicenseChecked;
-use LaravelReady\LicenseServer\Exceptions\ListenerNotFoundException;
+use Xslain\LicenseServer\Events\LicenseChecked;
+use Xslain\LicenseServer\Exceptions\ListenerNotFoundException;
 
 final class EventServiceProvider extends ServiceProvider
 {

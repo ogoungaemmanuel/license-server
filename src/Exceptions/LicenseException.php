@@ -1,9 +1,7 @@
 <?php
 
-namespace LaravelReady\LicenseServer\Exceptions;
+namespace Xslain\LicenseServer\Exceptions;
 
 use Exception;
 
-final class LicenseException extends Exception
-{
-}
+final class LicenseException extends Exception {}

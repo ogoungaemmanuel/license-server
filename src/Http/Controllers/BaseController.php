@@ -1,6 +1,6 @@
 <?php
 
-namespace LaravelReady\LicenseServer\Http\Controllers;
+namespace Xslain\LicenseServer\Http\Controllers;
 
 use Illuminate\Routing\Controller;
 use Illuminate\Foundation\Bus\DispatchesJobs;
